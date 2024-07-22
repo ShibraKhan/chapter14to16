@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           
+     document.write("<h1>Chapter 14 to 16 </h1>")
+//      1. Declare an empty array using JS literal notation to store
+// student names in future.
+var literalArray=[];
+// 2. Declare an empty array using JS object notation to store
+// student names in future.
+var notationArray= new Array();
+// 3. Declare and initialize a strings array.
+var fruitsName=["apple","banana","pinapple"];
+// 4. Declare and initialize a numbers array.
+var number=["1","5","8"];
+// 5. Declare and initialize a boolean array.
+var bolean=["true","false",];
+// 6. Declare and initialize a mixed array.
+mixedArray=["apple","8","false"];
+
+// 7. Declare and Initialize an array and store available
+// education qualifications in Pakistan (e.g. SSC, HSC, BCS,
+// BS, BCOM, MS, M. Phil., PhD). Show the listed
+// qualifications in your browser
+document.write("<h1>Array on Qualification</h1>")
+var qualificationArray=["SSC","HSC","BCS","BS","BCOM","MS","M.PHIL","PHD"];
+// document.write(qualificationArray + "<br>");
+document.write("<p>");
+qualificationArray.forEach(qualification => {
+    document.write(qualification + "<br>");
+});
+
+// 8. Write a program to store 3 student names in an array.Take
+// another array to store score of these three students.
+// Assume that total marks are 500 for each student, display
+// the scores & percentages of students like:
+
+document.write("<h1>Program to store 3 students data</h1>")
+var studentsName=["Shibra","Aisha","Raza"];
+var scores = [420, 380, 450]; 
+var totalMarks=[500];
+document.write("<h2>Student Scores and Percentages:</h2>");
+document.write("<ul>");
+for (var i = 0; i < studentsName.length; i++) {
+    var percentage = (scores[i] / totalMarks) * 100;
+    document.write(`<li>${studentsName[i]} scored ${scores[i]} out of ${totalMarks}, ${percentage.toFixed(2)}%</li>`);
+}
+document.write("</ul>");
+
+ // Initialize an array with color names
+ var colors = ["Red", "Green", "Blue"];
+        document.write("Initial array: " + colors + "<br>");
+
+        // a. Add a color to the beginning of the array
+        var colorToAddBeginning = prompt("Enter a color to add to the beginning of the array:");
+        colors.unshift(colorToAddBeginning);
+        document.write("Array after adding color to the beginning: " + colors + "<br>");
+
+        // b. Add a color to the end of the array
+        var colorToAddEnd = prompt("Enter a color to add to the end of the array:");
+        colors.push(colorToAddEnd);
+        document.write("Array after adding color to the end: " + colors + "<br>");
+
+        // c. Add two more colors to the beginning of the array
+        colors.unshift("Yellow", "Purple");
+        document.write("Array after adding two more colors to the beginning: " + colors + "<br>");
+
+        // d. Delete the first color in the array
+        colors.shift();
+        document.write("Array after deleting the first color: " + colors + "<br>");
+
+        // e. Delete the last color in the array
+        colors.pop();
+        document.write("Array after deleting the last color: " + colors + "<br>");
+
+        // f. Add a color at a specific index
+        var indexToAdd = prompt("Enter the index at which you want to add a color:");
+        var colorToAddAtIndex = prompt("Enter the color to add at index " + indexToAdd + ":");
+        colors.splice(indexToAdd, 0, colorToAddAtIndex);
+        document.write("Array after adding color at index " + indexToAdd + ": " + colors + "<br>");
+
+        // g. Delete color(s) from a specific index
+        var indexToDelete = prompt("Enter the index from which you want to delete color(s):");
+        var numberOfColorsToDelete = prompt("Enter the number of colors you want to delete:");
+        colors.splice(indexToDelete, numberOfColorsToDelete);
+        document.write("Array after deleting " + numberOfColorsToDelete + " color(s) from index " + indexToDelete + ": " + colors + "<br>");
+
+
+        var array1 = [320, 230, 420, 180,];
+        document.write(array1 + "<br>")
+        array1.sort();
+        document.write(array1 + "<br>");
+
+
+ // Initialize an array with city names
+ var cities = ['karachi', 'Lahore', 'Islamabad', 'Quetta', 'Pishawar'];
+ 
+// Display the original cities array
+document.write("Original cities array: " + cities.join(", ") + "<br>");
+
+// Copy 3 elements from cities array to selectedCities array
+var selectedCities = cities.slice(2, 4);
+// Display the selected cities array
+document.write("Selected cities array: " + selectedCities.join(", ") + "<br>");
+
+
+
+ // Initialize the array with the given elements
+ var arr = ["This ", " is ", " my ", " cat"];
+
+// Use the join method to create a single string from the array
+var singleString = arr.join("");
+
+// Display the resulting string
+document.write("Joined string: " + singleString +"<br>");
+
+// 13. Create a new array. Store values one by one in such a way
+// that you can access the values in the order in which they
+// were stored. (FIFO-First In First Out)
+        // Initialize an array with device names
+        var devices = ['keyboard', 'mouse', 'printer', 'monitor'];
+
+        // Display the initial state of the array
+        document.write("Initial devices: " + devices.join(", ") + "<br>");
+
+        // Remove devices from the queue one by one and display the result
+        while (devices.length > 0) {
+            let removedDevice = devices.shift();
+            document.write("out "+"<br>" + removedDevice + "<br>");
+        }
+
+
+        var devices2 = ['keyboard', 'mouse', 'printer', 'monitor'];
+
+        // Display the initial state of the array
+        document.write("Initial devices: " + devices2.join(", ") + "<br>");
+
+        // Remove devices from the stack one by one and display the result
+        document.write("out " + devices2.pop() + "<br>"); // Removes 'monitor'
+        document.write("out " + devices2.pop() + "<br>"); // Removes 'printer'
+        document.write("out " + devices2.pop() + "<br>"); // Removes 'mouse'
+        document.write("out " + devices2.pop() + "<br>"); // Removes 'keyboard'
+
+//         15. Write a program to store phone manufacturers (Apple,
+// Samsung, Motorola, Nokia, Sony & Haier) in an array.
+// Display the following dropdown/select menu in your
+// browser using document.write() method:
+         // Write the dropdown directly to the document
+         document.write(`
+            <select name="manufacturers" id="manufacturers">
+                <option value="Apple">Apple</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Motorola">Motorola</option>
+                <option value="Nokia">Nokia</option>
+                <option value="Sony">Sony</option>
+                <option value="Haier">Haier</option>
+            </select>
+        `);
+
+
+    </script>
+</body>
+</html>
